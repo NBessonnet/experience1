@@ -1,0 +1,49 @@
+site_name: Experience1      # titre du site
+site_url: https:// NBessonnet.github.io/experience1/   # url du site
+
+site_description: Exemple de site avec MkDocs 
+site_author: "Nathalie Bessonnet"
+
+docs_dir: docs
+
+theme: material
+
+markdown_extensions:
+  - pymdownx.superfences  # coloration syntaxique
+  - pymdownx.details      # boits repliables
+  - pymdownx.tabbed:       # onglets
+      alternate_style: true 
+  - pymdownx.arithmatex:    # ecrire en latex
+      generic : true        
+  - attr_list             # options image
+  - admonition            # boites avertissement
+  - pymdownx.snippets     # inclusion de fichiers externes
+  - pymdownx.tasklist:    # cases à cocher
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+      separator: "\uff0b"
+  - pymdownx.emoji:               # Émojis  :boom:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter
+      include_source: True # Inclu une copie du fichier source.ipynb (ou .py) dans le dossier de la page sur le site pour son téléchargement
+
+
+extra_javascript:
+    - xtra/javascripts/mathjax-config.js                    # MathJax
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+    - xtra/stylesheets/ajustements.css                      # ajustements
+
+
+
+nav:
+  - 'accueil': 'index.md'
+  - 'infos': 'infos.md'
+  - 'NSI':
+      - 'Chapitre 1': 'NSI/CH1/bases.md'
