@@ -6,7 +6,23 @@ site_author: "Nathalie Bessonnet"
 
 docs_dir: docs
 
-theme: material
+
+theme: 
+    name: material
+    palette: 
+      - scheme: slate # theme foncé default nom du thème clair
+        primary: teal # header, the sidebar, text links
+        accent: deep orange # links, buttons and scrollbars
+    font:
+        text: Indie Flower # Moon Dance 
+        code: Roboto Mono
+    language: fr
+    logo: images/yoda.png # icone en haut à gauche de l'entete
+    favicon: images/falcon.png # icone de l'onglet
+    features:
+        - toc.integrate # table of content à gauche
+        - navigation.top # bouton vers le haut de la page
+        - header.autohide # cache le header lorsque l'on scrolle la page
 
 markdown_extensions:
   - pymdownx.superfences  # coloration syntaxique
